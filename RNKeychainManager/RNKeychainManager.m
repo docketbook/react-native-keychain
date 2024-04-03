@@ -172,7 +172,7 @@ SecAccessControlCreateFlags accessControlValue(NSDictionary *options)
       return kSecAccessControlUserPresence;
     }
     else if ([options[kAccessControlType] isEqualToString: kAccessControlBiometryAny]) {
-      return kSecAccessControlTouchIDAny;
+      return kSecAccessControlBiometryAny ;
     }
     else if ([options[kAccessControlType] isEqualToString: kAccessControlBiometryCurrentSet]) {
       return kSecAccessControlTouchIDCurrentSet;
@@ -181,7 +181,7 @@ SecAccessControlCreateFlags accessControlValue(NSDictionary *options)
       return kSecAccessControlDevicePasscode;
     }
     else if ([options[kAccessControlType] isEqualToString: kAccessControlBiometryAnyOrDevicePasscode]) {
-      return kSecAccessControlTouchIDAny|kSecAccessControlOr|kSecAccessControlDevicePasscode;
+      return kSecAccessControlBiometryAny |kSecAccessControlOr|kSecAccessControlDevicePasscode;
     }
     else if ([options[kAccessControlType] isEqualToString: kAccessControlBiometryCurrentSetOrDevicePasscode]) {
       return kSecAccessControlTouchIDCurrentSet|kSecAccessControlOr|kSecAccessControlDevicePasscode;
